@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#main'
+  get  'my_portfolio' , to: 'users#my_portfolio'
 
    authenticated :user do
     root to: 'home#index', as: :authenticated_root
